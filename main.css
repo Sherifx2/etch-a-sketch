@@ -1,0 +1,67 @@
+* {
+  font-family: Orbitron;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+body {
+  background-color: whitesmoke;
+  margin: 0 auto;
+}
+header {
+  color: red;
+  height: 5em;
+  text-align: center;
+}
+
+main {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  flex-wrap: wrap;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  gap: 1em;
+  width: 15em;
+  padding: 1em;
+  margin: 1em;
+  background-color: white;
+  box-shadow: 0 0 0.1em #3333;
+}
+.controls > * {
+  padding: 1em;
+  border: none;
+  background-color: whitesmoke;
+  color: #666;
+  border-bottom: 1px solid red;
+  transition: 100ms;
+  width: 100%;
+}
+.controls > *:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.etch-a-sketch {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width: 30em;
+  height: 30em;
+  background-color: white;
+  box-shadow: 0 0 0.1em #3333;
+  flex-shrink: 0;
+  gap: 1px;
+}
+.draw {
+  display: flex;
+  flex-direction: column;
+}

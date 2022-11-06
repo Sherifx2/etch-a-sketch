@@ -1,1 +1,48 @@
-    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Etch-A-Sketch</h1>
+    </header>
+    <main>
+      <div class="controls">
+        <button
+          id="draw"
+          onclick="(changeColor(document.getElementById('colorPicker').value))">
+          <input
+            id="colorPicker"
+            type="color"
+            value="#333333"
+            onchange="changeColor(this.value)" />
+          <p>Draw</p>
+        </button>
+        <button id="erase" onclick="changeColor('whitesmoke')">Erase</button>
+        <button id="clear" onclick="clearSketch()">Clear</button>
+      </div>
+      <div class="container">
+        <div class="etch-a-sketch" id="etch-a-sketch"></div>
+        <input
+          class="slider"
+          id="slider"
+          type="range"
+          value="16"
+          min="1"
+          max="64"
+          onchange="setupGrid(this.value)" />
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
